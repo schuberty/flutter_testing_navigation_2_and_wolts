@@ -8,6 +8,9 @@ final goRouter = GoRouter(
       path: "/",
       name: "home",
       pageBuilder: (context, state) {
+        // Without transition it appears normally (needs restart to set routes)
+        // return const NoTransitionPage(child: SimpleView());
+
         // Here is the transition that makes it dissapear
         return CustomTransitionPage(
           child: const SimpleView(),
